@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas height="100vh" id="my-canvas"></canvas>
+    <button onclick="console.log(getData())">GET DATA <i class="fa-solid fa-code"></i></button>
+</body>
+    <script src="https://kit.fontawesome.com/ee4fc1817f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script>
+        async function getData(){
+            confeti();
+
+            fetch("https://restcountries.com/v3.1/all")
+            .then(res=>res.json())
+            .then((res) => console.log("res.data", res))
+            .catch((err) => console.log(err));
+        }
+        function confeti(){
+            const jsConfetti = new JSConfetti()
+            jsConfetti.addConfetti()
+        }
+        confeti()
+    </script>
+</html>

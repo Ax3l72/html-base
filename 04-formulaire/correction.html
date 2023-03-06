@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <!-- Le form contient tout le necessaire pour envoyer des informations.
+        Il peut y en avoir plusieur (label, input, select, radio button, button, etc..)
+        https://www.w3schools.com/tags/tag_form.asp
+    -->
+    <form action="" method="post">
+        <!-- Le fieldset nous permet de délimité tout le formulaire
+            https://www.w3schools.com/tags/tag_fieldset.asp
+        -->
+        <fieldset>
+            <!-- Définit une étiquette pour un élément 
+                https://www.w3schools.com/tags/tag_label.asp
+            -->
+            <label for="user">User :</label>
+            <!-- Champ de saisie
+                https://www.w3schools.com/tags/tag_input.asp
+            -->
+            <input type="text" name="user" id="user">
+            <label for="mail">Email :</label>
+            
+            <input type="email" name="mail" id="mail">
+            <label for="tag">Choose a tag:</label>
+            
+            <!-- Permet de faire une liste déroulante
+                https://www.w3schools.com/tags/tag_select.asp
+            -->
+            <select id="tag" name="tag">
+                <!-- Permet de lister les options avec leur value dans un select
+                    https://www.w3schools.com/tags/tag_option.asp
+                 -->
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="cdui">CDUI</option>
+                <option value="cda">CDA</option>
+            </select>
+            
+            <!-- Champ de saisie multi-ligne
+                https://www.w3schools.com/tags/tag_textarea.asp
+            -->
+            <textarea name="message" rows="10" cols="30">Votre texte</textarea>
+            
+            <!-- Le bouton de type submit permet d'envoyer les champs (si il est dans un form) sur la route (action) donné
+                https://www.w3schools.com/tags/tag_button.asp
+            -->
+            <button type="submit">SEND</button>
+        
+        </fieldset>
+    </form>
+</body>
+</html>

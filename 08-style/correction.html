@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+</head>
+<body>
+    <h1>Bonjour</h1>
+    <!-- Utilisation de css dans une balise style directement dans l'html
+        https://www.w3schools.com/tags/tag_style.asp
+    -->
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        /* Création de la variable css */
+        :root{
+            --main-bg-color: brown;
+        }
+        h1{
+            /* Utilisation de la variable css  */
+            background-color: var(--main-bg-color);
+        }
+    </style>
+</body>
+</html>

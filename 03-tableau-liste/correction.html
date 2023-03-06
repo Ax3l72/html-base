@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau - Liste</title>
+</head>
+
+<body>
+    <!-- La balise ul s'utilise avec la balise li afin de faire une lite non ordoné
+        https://www.w3schools.com/tags/tag_ul.asp
+    -->
+    <ul>
+        <!-- Les li sont par defualt avec une puce que l'on peux enlever ou modifier via le css
+            li { list-style: none }
+            https://www.w3schools.com/tags/tag_li.asp
+         -->
+        <li>Etape 1</li>
+        <li>Etape 2</li>
+        <li>Etape 3</li>
+        <li>Etape 4</li>
+    </ul>
+
+    <!-- La balise ol s'utilise avec la balise li afin de faire un list ordoné
+        https://www.w3schools.com/tags/tag_ol.asp
+    -->
+    <ol start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <!-- Tableau
+        https://www.w3schools.com/html/html_tables.asp
+    -->
+    <table>
+        <!-- Ligne <thead> pour 'table head'
+            https://www.w3schools.com/tags/tag_thead.asp
+        -->
+        <thead>
+            <!-- <tr> Définit une rangée dans un tableau. 'table row'
+                https://www.w3schools.com/tags/tag_tr.asp
+            -->
+            <tr>
+
+                <!-- <th> Définit une cellule d'en-tête dans un tableau. 'table head'
+                    https://www.w3schools.com/tags/tag_th.asp
+                -->
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Age</th>
+                <th>Argent</th>
+            </tr>
+        </thead>
+
+        <!-- Ligne <tbody> pour 'table body'
+            https://www.w3schools.com/tags/tag_tbody.asp
+        -->
+        <tbody>
+            <tr>
+                <!-- <td> Définit une cellule dans un tableau pour les donnée '' -->
+                <td>Jean</td>
+                <td>Bruno</td>
+                <td>56</td>
+                <td>2,300$</td>
+            </tr>
+            <tr>
+                <td>Eude</td>
+                <td>Alain</td>
+                <td>59</td>
+                <td>1,500$</td>
+            </tr>
+        </tbody>
+
+        <!-- Ligne <tfoot> pour 'table footer'
+            https://www.w3schools.com/tags/tag_tfoot.asp
+        -->
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td>3,800$</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

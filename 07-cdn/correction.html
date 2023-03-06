@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN</title>
+
+    <!-- 
+        Un CDN (Content Delivry Network) est un import de contenu depuis une url (static, ou pas)
+        Cela permet d'ajouter du contenu directemement depuis le web
+        Il permet d'utiliser des librairy simplement.
+     -->
+
+
+    <!-- Import / Ajout du script pour les icons
+        https://developer.mozilla.org/en-US/docs/Glossary/CDN
+        https://fontawesome.com/icons?d=gallery&p=2
+    -->
+    <script src="https://kit.fontawesome.com/ee4fc1817f.js" crossorigin="anonymous"></script>
+
+    <!-- Import / Ajout du script pour les confeti
+            https://www.npmjs.com/package/js-confetti
+        -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+</head>
+
+<body>
+    <!-- Enplacement ou sera afficher les confetis
+        https://www.w3schools.com/tags/tag_canvas.asp
+    -->
+    <canvas height="100vh" id="my-canvas"></canvas>
+
+    <!-- Au click du bouton la fonction getData sera lancé
+        https://www.w3schools.com/tags/tag_button.asp
+    -->
+    <button onclick="console.log(getData())">GET DATA <i class="fa-solid fa-code"></i></button>
+
+    <!-- JS-CONFETTI -->
+    <!-- Ajout du script pour les icons
+            https://www.w3schools.com/tags/tag_script.asp
+        -->
+    <!-- Script qui permet de crée les confetis -->
+    <script>
+        // Fonction getData
+        async function getData() {
+            // Lancement de la fonction confeti
+            confeti();
+
+            // Requête GET sur l'API restcountries qui donnera tout les pays du monde
+            fetch("https://restcountries.com/v3.1/all")
+                // Conversion de la réponse en json
+                .then(res => res.json())
+                // Log dans la console de la réponse
+                .then((res) => console.log("res.data", res))
+                // En cas d'erreur, elle sera donner dans la console 
+                .catch((err) => console.log(err));
+        }
+
+        // Fonction confeti
+        function confeti() {
+            const jsConfetti = new JSConfetti()
+            jsConfetti.addConfetti()
+        }
+
+        // Lancement de la fonction confeti
+        confeti()
+
+    </script>
+</body>
+
+</html>
